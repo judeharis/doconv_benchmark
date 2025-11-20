@@ -475,7 +475,7 @@ gather_golden_results() {
 
     if [ ! -d "$EXP_DATA_DIR" ]; then
         log_error "Experimental data directory not found: $EXP_DATA_DIR"
-        log_error "Run './scripts/run_benchmark_and_generate.sh' first to create local deconv_data."
+        log_error "Run './run_benchmark_and_generate.sh' first to create local deconv_data."
         return 1
     fi
     

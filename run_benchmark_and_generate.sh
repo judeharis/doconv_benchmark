@@ -29,7 +29,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+PROJECT_ROOT="${SCRIPT_DIR}"
 
 PYTHON_BIN="${PYTHON:-python3}"  # override via env PYTHON=<executable>
 
@@ -164,7 +164,7 @@ mkdir -p "$config_dir"
 
 # Construct benchmark command (array form for safe quoting)
 benchmark_cmd=(
-  "$PYTHON_BIN" "$SCRIPT_DIR/deconv_benchmark.py"
+  "$PYTHON_BIN" "$SCRIPT_DIR/scripts/deconv_benchmark.py"
   --param-file "$param_file"
   --out-dir "$out_dir"
   --seed "$seed"
@@ -205,7 +205,7 @@ echo "------------------------------------------------------------"
 
 echo "[RUN] Generating HLS configuration headers..."
 gen_cmd=(
-  "$PYTHON_BIN" "$SCRIPT_DIR/generate_deconv_configs.py"
+  "$PYTHON_BIN" "$SCRIPT_DIR/scripts/generate_deconv_configs.py"
   --csv "$csv_path"
   --exp-data "$exp_data_dir"
   --output "$config_dir"

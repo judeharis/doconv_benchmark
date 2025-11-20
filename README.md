@@ -5,7 +5,7 @@ This repository provides an automated pipeline to: (1) generate synthetic benchm
 ## Overview
 
 Core components:
-1. **Orchestrator Script** (`scripts/run_benchmark_and_generate.sh`) – Generates benchmark tensors + headers (with padding `P` embedded) in one step.
+1. **Orchestrator Script** (`run_benchmark_and_generate.sh`) – Generates benchmark tensors + headers (with padding `P` embedded) in one step.
 2. **Standalone Generator** (`scripts/generate_deconv_configs.py`) – Rebuild headers from a CSV + experimental data (`exp_data`).
 3. **Management Script** (`./manage_hls_projects.sh`) – Lifecycle commands: validate, generate, csim, synthesize, cosim, gather, compare, run.
 4. **TCL Scripts** (`scripts/*.tcl`) – Project creation, validation, demo, test.
@@ -49,7 +49,7 @@ DeConv_hls_benchmark/
 
 ### 1. Benchmark Data + Header Generation
 ```bash
-./scripts/run_benchmark_and_generate.sh --param-file parameter_space.json
+./run_benchmark_and_generate.sh --param-file parameter_space.json
 ```
 Produces:
 - `deconv_data/exp_data/` (inputs, weights, outputs, shapes CSVs)

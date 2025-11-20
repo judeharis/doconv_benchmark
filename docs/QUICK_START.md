@@ -10,7 +10,7 @@ Generate benchmark data, produce HLS headers, create projects, simulate, gather 
 
 ## 1. Benchmark + Header Generation
 ```bash
-./scripts/run_benchmark_and_generate.sh --param-file parameter_space.json
+./run_benchmark_and_generate.sh --param-file parameter_space.json
 ```
 Outputs:
 - `deconv_data/exp_data/` (inputs, weights, outputs, shapes CSVs)

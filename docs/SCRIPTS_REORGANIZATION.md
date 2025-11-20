@@ -8,7 +8,7 @@
 ## Subsequent Additions
 | Feature | Purpose |
 |---------|---------|
-| `run_benchmark_and_generate.sh` | One command to produce benchmark tensors + config headers including padding.
+| `run_benchmark_and_generate.sh` (root) | One command to produce benchmark tensors + config headers including padding.
 | Padding `P` in filenames | Unambiguous config naming and macro generation.
 | Golden gathering (`gather-golden`) | Copies reference output CSVs from local `deconv_data/exp_data` into `golden_results/`.
 | Output gathering (`gather-outputs`) | Collects csim outputs with PE/SIMD suffix into `outputs/`.
@@ -20,6 +20,10 @@
 
 ## Current Script Landscape
 ```
+Root:
+  run_benchmark_and_generate.sh  (orchestrator)
+  manage_hls_projects.sh         (main workflow)
+
 scripts/
   generate_hls_projects.tcl
   validate_hls_setup.tcl
@@ -27,7 +31,6 @@ scripts/
   test_hls_basic.tcl
   deconv_benchmark.py
   generate_deconv_configs.py
-  run_benchmark_and_generate.sh
 ```
 Generated (after project creation):
 ```
