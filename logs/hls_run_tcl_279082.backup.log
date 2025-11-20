@@ -1,0 +1,17 @@
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run tcl -f /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/run_all_synthesis.tcl -work_dir /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Wed Oct 22 12:52:19 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /mnt/Crucial/Xilinx2024/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'jude' on host 'jude' (Linux_x86_64 version 6.8.0-85-generic) on Wed Oct 22 12:52:20 BST 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.4 LTS
+INFO: [HLS 200-10] In directory '/mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark'
+ERROR: HLS Tcl script does not exist: /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/run_all_synthesis.tcl
+INFO: [HLS 200-112] Total CPU user time: 1.59 seconds. Total CPU system time: 0.16 seconds. Total elapsed time: 1.54 seconds; peak allocated memory: 97.824 MB.
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

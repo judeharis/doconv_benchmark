@@ -1,0 +1,145 @@
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run tcl -f /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/scripts/generate_hls_projects.tcl -work_dir /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Wed Oct 22 17:26:57 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /mnt/Crucial/Xilinx2024/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'jude' on host 'jude' (Linux_x86_64 version 6.8.0-85-generic) on Wed Oct 22 17:26:58 BST 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.4 LTS
+INFO: [HLS 200-10] In directory '/mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark'
+Sourcing Tcl script '/mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/scripts/generate_hls_projects.tcl'
+[2025-10-22 17:26:58] [INFO] Starting HLS project generation
+[2025-10-22 17:26:58] [INFO] Configuration directory: /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/generated_configs
+[2025-10-22 17:26:58] [INFO] Projects directory: /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects
+[2025-10-22 17:26:58] [INFO] Created directory: /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects
+[2025-10-22 17:26:58] [INFO] Found 2 configuration files
+[2025-10-22 17:26:58] [INFO] Processing configuration file: deconv_top_K3_S1_H3_W3_CI1_CO3_P1.hpp
+[2025-10-22 17:26:58] [INFO]   Found 2 PE/SIMD configurations
+[2025-10-22 17:26:58] [INFO] Creating HLS project: deconv_K3_S1_H3_W3_CI1_CO3_P1
+[2025-10-22 17:26:58] [INFO]   Configuration: K=3, S=1, H=3, W=3, CI=1, CO=3
+[2025-10-22 17:26:58] [INFO] Created directory: /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P1
+INFO: [HLS 200-1510] Running: open_project /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P1 
+INFO: [HLS 200-10] Creating and opening project '/mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P1'.
+INFO: [HLS 200-1510] Running: set_top deconv_top 
+[2025-10-22 17:26:58] [INFO] Copied: deconv_top_K3_S1_H3_W3_CI1_CO3_P1.hpp -> deconv_top.hpp
+INFO: [HLS 200-1510] Running: add_files /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P1/deconv_top.hpp -cflags -std=c++14 
+INFO: [HLS 200-10] Adding design file '/mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P1/deconv_top.hpp' to the project
+[2025-10-22 17:26:58] [INFO] Copied: deconv_top.cpp -> deconv_top.cpp
+INFO: [HLS 200-1510] Running: add_files /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P1/deconv_top.cpp -cflags -std=c++14 
+INFO: [HLS 200-10] Adding design file '/mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P1/deconv_top.cpp' to the project
+[2025-10-22 17:26:58] [INFO] Copied: deconv.hpp -> deconv.hpp
+INFO: [HLS 200-1510] Running: add_files /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P1/deconv.hpp -cflags -std=c++14 
+INFO: [HLS 200-10] Adding design file '/mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P1/deconv.hpp' to the project
+[2025-10-22 17:26:58] [INFO] Copied: utils.hpp -> utils.hpp
+INFO: [HLS 200-1510] Running: add_files /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P1/utils.hpp -cflags -std=c++14 
+INFO: [HLS 200-10] Adding design file '/mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P1/utils.hpp' to the project
+[2025-10-22 17:26:58] [INFO] Copied: deconv_tb.cpp -> deconv_tb.cpp
+INFO: [HLS 200-1510] Running: add_files -tb /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P1/deconv_tb.cpp -cflags -std=c++14 -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file '/mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P1/deconv_tb.cpp' to the project
+[2025-10-22 17:26:58] [INFO]   Creating solution: solution1_PE1_SIMD1 (PE=1, SIMD=1)
+INFO: [HLS 200-1510] Running: open_solution solution1_PE1_SIMD1 
+INFO: [HLS 200-10] Creating and opening solution '/mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P1/solution1_PE1_SIMD1'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xczu3eg-sbva484-1-i 
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sbva484-1-i'
+INFO: [HLS 200-1510] Running: create_clock -period 5 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_ctrl_none deconv_top return 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode axis deconv_top src 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode axis deconv_top dst 
+INFO: [HLS 200-1510] Running: set_directive_dataflow deconv_top 
+INFO: [HLS 200-1510] Running: close_solution 
+[2025-10-22 17:26:59] [INFO]   Creating solution: solution2_PE3_SIMD1 (PE=3, SIMD=1)
+INFO: [HLS 200-1510] Running: open_solution solution2_PE3_SIMD1 
+INFO: [HLS 200-10] Creating and opening solution '/mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P1/solution2_PE3_SIMD1'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xczu3eg-sbva484-1-i 
+INFO: [HLS 200-1510] Running: create_clock -period 5 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_ctrl_none deconv_top return 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode axis deconv_top src 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode axis deconv_top dst 
+INFO: [HLS 200-1510] Running: set_directive_dataflow deconv_top 
+INFO: [HLS 200-1510] Running: close_solution 
+INFO: [HLS 200-1510] Running: close_project 
+[2025-10-22 17:26:59] [INFO] Successfully created project: deconv_K3_S1_H3_W3_CI1_CO3_P1
+[2025-10-22 17:26:59] [INFO] Completed processing: deconv_top_K3_S1_H3_W3_CI1_CO3_P1.hpp
+[2025-10-22 17:26:59] [INFO] Processing configuration file: deconv_top_K3_S1_H3_W3_CI1_CO3_P2.hpp
+[2025-10-22 17:26:59] [INFO]   Found 2 PE/SIMD configurations
+[2025-10-22 17:26:59] [INFO] Creating HLS project: deconv_K3_S1_H3_W3_CI1_CO3_P2
+[2025-10-22 17:26:59] [INFO]   Configuration: K=3, S=1, H=3, W=3, CI=1, CO=3
+[2025-10-22 17:26:59] [INFO] Created directory: /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P2
+INFO: [HLS 200-1510] Running: open_project /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P2 
+INFO: [HLS 200-10] Creating and opening project '/mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P2'.
+INFO: [HLS 200-1510] Running: set_top deconv_top 
+[2025-10-22 17:26:59] [INFO] Copied: deconv_top_K3_S1_H3_W3_CI1_CO3_P2.hpp -> deconv_top.hpp
+INFO: [HLS 200-1510] Running: add_files /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P2/deconv_top.hpp -cflags -std=c++14 
+INFO: [HLS 200-10] Adding design file '/mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P2/deconv_top.hpp' to the project
+[2025-10-22 17:26:59] [INFO] Copied: deconv_top.cpp -> deconv_top.cpp
+INFO: [HLS 200-1510] Running: add_files /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P2/deconv_top.cpp -cflags -std=c++14 
+INFO: [HLS 200-10] Adding design file '/mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P2/deconv_top.cpp' to the project
+[2025-10-22 17:26:59] [INFO] Copied: deconv.hpp -> deconv.hpp
+INFO: [HLS 200-1510] Running: add_files /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P2/deconv.hpp -cflags -std=c++14 
+INFO: [HLS 200-10] Adding design file '/mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P2/deconv.hpp' to the project
+[2025-10-22 17:26:59] [INFO] Copied: utils.hpp -> utils.hpp
+INFO: [HLS 200-1510] Running: add_files /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P2/utils.hpp -cflags -std=c++14 
+INFO: [HLS 200-10] Adding design file '/mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P2/utils.hpp' to the project
+[2025-10-22 17:26:59] [INFO] Copied: deconv_tb.cpp -> deconv_tb.cpp
+INFO: [HLS 200-1510] Running: add_files -tb /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P2/deconv_tb.cpp -cflags -std=c++14 -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file '/mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P2/deconv_tb.cpp' to the project
+[2025-10-22 17:26:59] [INFO]   Creating solution: solution1_PE1_SIMD1 (PE=1, SIMD=1)
+INFO: [HLS 200-1510] Running: open_solution solution1_PE1_SIMD1 
+INFO: [HLS 200-10] Creating and opening solution '/mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P2/solution1_PE1_SIMD1'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xczu3eg-sbva484-1-i 
+INFO: [HLS 200-1510] Running: create_clock -period 5 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_ctrl_none deconv_top return 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode axis deconv_top src 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode axis deconv_top dst 
+INFO: [HLS 200-1510] Running: set_directive_dataflow deconv_top 
+INFO: [HLS 200-1510] Running: close_solution 
+[2025-10-22 17:26:59] [INFO]   Creating solution: solution2_PE3_SIMD1 (PE=3, SIMD=1)
+INFO: [HLS 200-1510] Running: open_solution solution2_PE3_SIMD1 
+INFO: [HLS 200-10] Creating and opening solution '/mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/deconv_K3_S1_H3_W3_CI1_CO3_P2/solution2_PE3_SIMD1'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xczu3eg-sbva484-1-i 
+INFO: [HLS 200-1510] Running: create_clock -period 5 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_ctrl_none deconv_top return 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode axis deconv_top src 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode axis deconv_top dst 
+INFO: [HLS 200-1510] Running: set_directive_dataflow deconv_top 
+INFO: [HLS 200-1510] Running: close_solution 
+INFO: [HLS 200-1510] Running: close_project 
+[2025-10-22 17:26:59] [INFO] Successfully created project: deconv_K3_S1_H3_W3_CI1_CO3_P2
+[2025-10-22 17:26:59] [INFO] Completed processing: deconv_top_K3_S1_H3_W3_CI1_CO3_P2.hpp
+[2025-10-22 17:26:59] [INFO] Project generation completed
+[2025-10-22 17:26:59] [INFO] Total projects: 2
+[2025-10-22 17:26:59] [INFO] Successful: 2
+[2025-10-22 17:26:59] [INFO] Failed: 0
+[2025-10-22 17:26:59] [INFO] All projects created successfully!
+[2025-10-22 17:26:59] [INFO] Generated synthesis script: /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/run_all_synthesis.tcl
+[2025-10-22 17:26:59] [INFO] Generated report extraction script: /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/extract_reports.tcl
+[2025-10-22 17:26:59] [INFO] Generating C simulation script: /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/run_all_csim.tcl
+[2025-10-22 17:26:59] [INFO] Generated C simulation script: /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/run_all_csim.tcl
+[2025-10-22 17:26:59] [INFO] Generating co-simulation script: /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/run_all_cosim.tcl
+[2025-10-22 17:26:59] [INFO] Generated co-simulation script: /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects/run_all_cosim.tcl
+[2025-10-22 17:26:59] [INFO] Additional utility scripts generated in /mnt/Crucial/WorkspaceB/finn_hls/DeConv_hls_benchmark/hls_projects
+[2025-10-22 17:26:59] [INFO] - run_all_synthesis.tcl: Batch synthesis for all projects
+[2025-10-22 17:26:59] [INFO] - extract_reports.tcl: Extract synthesis reports (template)
+[2025-10-22 17:26:59] [INFO] - run_all_csim.tcl: Batch C simulation for all projects
+[2025-10-22 17:26:59] [INFO] - run_all_cosim.tcl: Batch co-simulation for all projects
+[2025-10-22 17:26:59] [INFO] Script completed successfully
+INFO: [HLS 200-112] Total CPU user time: 2.56 seconds. Total CPU system time: 0.56 seconds. Total elapsed time: 2.94 seconds; peak allocated memory: 471.129 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 3s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

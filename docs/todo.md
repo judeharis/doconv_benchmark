@@ -1,0 +1,5 @@
+- Check why padding does not work properly (verify if discrepancy is due to output tensor indexing or weight placement)
+- Add MM2IM to this infrastructure (extend generator + project creation path)
+- Verify correctness with PyTorch reference (introduce comparison harness producing numeric deltas)
+- Collate synthesis & latency metrics into timestamped comparison directories
+- Add JSON summary export for each `compare-results` run

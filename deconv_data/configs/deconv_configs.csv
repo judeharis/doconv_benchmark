@@ -1,0 +1,3 @@
+input_size,in_channels,out_channels,kernel_size,stride,padding
+3,1,3,3,1,2
+3,1,3,3,1,1
