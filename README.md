@@ -122,17 +122,6 @@ deconv_K3_S1_H3_W3_CI1_CO3/
 └── ...
 ```
 
-### HLS Settings
-- **Target Device**: xczu3eg-sbva484-1-i (Zynq UltraScale+)
-- **Clock Period**: 5ns (200MHz)
-- **Reset**: Synchronous, active high
-- **Interfaces**: AXI Stream for input/output ports
-
-### HLS Directives
-- `#pragma HLS interface ap_ctrl_none` - No control interface
-- `#pragma HLS interface axis` - AXI Stream interfaces
-- `#pragma HLS dataflow` - Dataflow optimization
-
 ## Result Comparison & Golden Data
 
 Commands:
@@ -145,17 +134,6 @@ Use `run` to chain all of the above after `csim`. Each comparison run is stored 
 
 ## Customization
 
-### Changing Target Device
-Edit the `TARGET_DEVICE` variable in `scripts/generate_hls_projects.tcl`:
-```tcl
-set TARGET_DEVICE "xczu3eg-sbva484-1-i"  # Change to your target device
-```
-
-### Modifying Clock Frequency
-Edit the `CLOCK_PERIOD` variable:
-```tcl
-set CLOCK_PERIOD "5"  # 5ns = 200MHz, adjust as needed  
-```
 
 ### Adding New Configurations
 1. Add new configurations to the CSV file or modify the notebook
@@ -177,33 +155,6 @@ You can modify the `generate_pe_simd_configs` function in the notebook to change
 Removes: `hls_projects/`, `hls_projects_demo/`, `test_hls_project/`, `outputs/`, `golden_results/`
 Preserves: `comparison_results/` (historical validation runs)
 
-## Troubleshooting
-
-### Common Issues
-
-1. **No configuration files found**
-   - Make sure to run the Jupyter notebook first
-   - Check that `generated_configs/` directory contains `.hpp` files
-
-2. **Source files missing**
-   - Ensure all files exist in the `src/` directory
-   - Check file permissions
-
-3. **Vitis/Vivado HLS not found**
-   - Make sure Vitis 2024.1+ is installed and in your PATH
-   - Source the Vitis settings: `source /path/to/Vitis/settings64.sh`
-   - For legacy: Source Vivado settings: `source /path/to/Vivado/settings64.sh`
-
-4. **Project creation fails**
-   - Check Vitis/Vivado HLS version compatibility
-   - Verify target device is supported
-   - Check log messages for specific errors
-
-### Debug Mode
-Add this line to the TCL script for more verbose output:
-```tcl
-set DEBUG 1
-```
 
 ## Output & Comparison Artifacts
 
@@ -229,12 +180,6 @@ The generated projects support complete HLS verification workflow:
 - **Co-simulation**: Validate RTL behavior matches C model
 - **Automated Testing**: Batch simulation across all configurations
 
-### Performance Metrics
-- **Resource Utilization**: Compare LUT, FF, DSP, BRAM usage across configurations
-- **Timing Analysis**: Evaluate achievable clock frequencies
-- **Latency Analysis**: Measure processing latency for different configurations
-- **Throughput Analysis**: Calculate data throughput rates
-
 ### Analysis Workflow
 1. Run `./manage_hls_projects.sh csim` for functional verification
 2. Run `./manage_hls_projects.sh synthesize` for resource analysis
@@ -248,23 +193,3 @@ Extended docs have moved under `docs/`:
 - `docs/SCRIPTS_REORGANIZATION.md` – Evolution & layout.
 - `docs/VITIS_2024_MIGRATION.md` – Tooling migration notes.
 - `docs/todo.md` – Backlog items.
-
-## Contributing
-
-When adding new features:
-
-1. Update the Jupyter notebook for new configuration parameters
-2. Modify the TCL script to handle new project settings
-3. Update this README with any new usage instructions
-4. Test with a small configuration set before running on all configs
-
-## Recent Enhancements Snapshot
-- Padded filenames include `P` for clarity & future parameter growth.
-- Orchestrator script unifies data + header generation.
-- Timestamped comparison history retained (audit & regression tracking).
-- Local golden data sourced from benchmark run for reproducibility.
-- `run` meta command simplifies verification pipeline.
-
-## License
-
-This project is part of the FINN HLS benchmark suite. Please refer to the main project license for usage terms.
